@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>项目一</title>
+		<link rel="stylesheet" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/005.css"/>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header>
+				<a href="index.html" class="logo">
+					<h1>个人主页</h1>
+					<img src="img/mist.svg" alt="" />
+				</a>
+				<nav class="mainNav">
+					<ul class="clearfix">
+						<li><a href="#a">关于</a></li>
+						<li><a href="#b">工作</a></li>
+						<li><a href="#c">联系</a></li>
+					</ul>
+				</nav>
+				<a id="a"></a>
+				<h2>陈黎铭</h2>
+		
+				<p><b>everybody puts your hands up！</b></p>
+				
+			</header>
+			<main>
+				<section class="favContainer">
+					<h2>项目</h2>
+					<ul class="fav clearfix">
+						<li><a href="#" title="1">1</a></li>
+						<li><a href="#" title="2">2</a></li>
+						<li><a href="#" title="3">3</a></li>
+						<li><a href="#" title="4">4</a></li>
+						<li><a href="#" title="5">5</a></li>
+						<li><a href="#" title="6">6</a></li>
+					</ul>
+				</section>
+				<section class="workContainer">
+					<a id="b"></a>
+					<h2>项目示例</h2>
+					<div class="work clearfix">
+						<figure>
+							<figcaption>代表项目</figcaption>
+							<img src="img/03.jpeg" alt="" />
+						</figure>
+						<figure>
+							<figcaption>代表项目</figcaption>
+							<img src="img/05.jpeg" alt="" />
+						</figure>
+						<figure>
+							<figcaption>代表项目</figcaption>
+							<img src="img/06.jpeg" alt="" />
+						</figure>
+						<figure>
+							<figcaption>代表项目</figcaption>
+							<img src="img/08.jpeg" alt="" />
+						</figure>
+						<figure>
+							<figcaption>代表项目</figcaption>
+							<img src="img/09.jpeg" alt="" />
+						</figure>
+						<figure>
+							<figcaption>代表项目</figcaption>
+							<img src="img/07.jpg" alt="" />
+						</figure>
+						
+					</div>
+				</section>
+				<section class="contactContainer">
+					<a id="c"></a>
+					<h2>情节</h2>
+					<p>........</p>
+					<dl>
+						<dt>邮箱</dt>
+						<dd>932042069@qq.com</dd>
+						<dt>QQ</dt>
+						<dd>932042069</dd>
+					</dl>
+					<div class="contact">
+						<input type="text" name="name" id="name" placeholder="名字" />
+						<input type="text" name="name" id="name" placeholder="邮箱" />
+						<select name="fav" id="fav">
+							<option value="fav">1</option>
+							<option value="web">2</option>
+							<option value="app">3</option>
+							<option value="html5">4</option>
+							<option value="chat">5</option>
+						</select>
+						<textarea name="message" id="message" placeholder="留言"></textarea>
+						<input type="submit" name="submit" id="submit" value="提交信息"/>
+					</div>
+				</section>
+			</main>
+			<footer>
+				
+				<a id="goTop" href="#">顶部</a>>
+			    </nav>
+			</footer>
+		</div>
+		<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+		<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$('header a, .rightNav a').on('click', function(e) {
+					e.preventDefault();
+					$('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500);
+					
+				});
+				$('#goTop').on('click', function(e) {
+					e.preventDefault();
+					$('html, body').animate({ scrollTop: 0}, 500);
+				});
+			});
+		</script>
+	</body>
+</html>
