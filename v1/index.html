@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			#a{
+				font-size: 14px;
+				text-indent: 2em;
+				line-height: 1.5em;
+			}
+		</style>
+	</head>
+	<body>
+		<a id="big" href="javascript:">大</a>&nbsp;<a id="small" href="javascript:">小</a>
+		<div id="a">
+			<p>Beatbox，全称Human Beatbox，起源于美国，是一种出现于1980年代的新兴Hip Hop元素，一种在21世纪初兴盛起来而形成的音乐文化。</p>
+			<p>可以通俗的理解为节奏口技，但与中国传统口技有本质上的区别。</p>
+			<p>Beatbox，在华语圈通常被称作B-Box，起源于美国，是一种出现于1980年代的Hip-Hop元素，一种在10年前兴盛起来而形成的音乐文化。</p>
+			<p>可以通俗的理解为节奏口技，但beatbox本质属于音乐，而口技是一种技巧性的艺术形式，所以beatbox不能被称之为口技，一般的beatboxer都不喜欢被别人用口技称呼，用平常的用语解释的话，就是节奏箱子。</p>
+			<p>Beatbox是音乐的一种表达方式，主要是涉及用嘴唇、牙齿、舌头、口腔和喉咙等多种技巧声音来模仿鼓声、电子以及特殊音效的一种新型艺术，也是阿卡贝拉(Acappella)表演中最重要的元素。</p>
+		</div>
+		<script type="text/javascript" charset="UTF-8">
+		    var a=document.getElementById('a');
+		    var big=document.getElementById('big');
+		    var small=document.getElementById('small');
+		    var i=14;
+		    big.onclick=function(){
+		    	i+=2;
+		    	a.style.fontSize=i+'px';
+		    }
+		     small.onclick=function(){
+		    	i-=2;
+		    	a.style.fontSize=i+'px';
+		    }
+			
+		</script>
+		
+	</body>
+</html>
