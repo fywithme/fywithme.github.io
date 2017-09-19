@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+		#banner{
+		width: 600px;
+		height: 400px;
+		margin: auto;
+		text-indent: -999em;
+		}
+		</style>		
+	</head>
+	<body id="bd">
+	<div id="banner">
+	</div>
+	<script type="text/javascript">
+	var sStr="01.jpg|02.jpg|03.jpg";
+	var aStr=sStr.split("|");
+	var oBanner=document.getElementById('banner');
+	var num=parseInt(Math.random()*3);
+	oBanner.style.backgroundImage="url(img/"+aStr[num]+")";
+	</script>
+	</body>
+</html>
