@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>凯里·欧文</title>
+		<style type="text/css">
+			body{
+				background-image: url(img/01.jpg);
+				background-size: 100%;
+			}
+			body h1{
+				color: white;
+				text-align: center;
+			}
+			body p{
+				color: white;
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 class="title">
+			凯里·欧文
+		</h1>
+		<p class="text">
+			凯里·欧文（Kyrie Irving），1992年3月23日出生于澳大利亚墨尔本，拥有美国/澳大利亚双重国籍，职业篮球运动员，司职控球后卫，效力于NBA波士顿凯尔特人队。凯里·欧文2011年以选秀状元身份进入NBA，新秀赛季当选最佳新秀；2014年首次入选全明星正赛先发阵容，并当选最有价值球员；同年代表美国队参加男篮世界杯，获得冠军并当选MVP；2014-15赛季入选最佳阵容第三阵容；2015-16赛季随骑士队获得NBA总冠军。
+		</p>
+		<script type="text/javascript">
+			function typeText(x,speed,z){
+				var oTitle=x;
+				var str=oTitle.innerText;
+				var i=0;
+				var loop=loop||false;
+				oTitle.innerText="";
+	
+				var a=setInterval(function () {
+					if(i<str.length){
+						oTitle.innerText+=str[i];
+					}else{
+						if(z){
+						i=-1;
+						oTitle.innerText="";
+						}else{
+							clearInterval(a);
+						}
+					}
+					i++;
+				},speed);
+			}
+			
+			var oH1=document.querySelector(".title");
+			var op=document.querySelector(".text");
+			typeText(oH1,500);
+			typeText(op,200,true);
+		</script>
+	</body>
+</html>
