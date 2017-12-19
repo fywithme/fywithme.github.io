@@ -1,0 +1,66 @@
+<!doctype html>
+
+<html>
+
+	<head>
+		<meta charset="UTF-8" />
+		<title></title>
+		<meta charset="UTF-8" />
+		<style type="text/css">
+			.menuhead {
+				border: 1px dashed #333;
+				width: 200px;
+				height: 36px;
+				padding: 3px 2px 2px 10px;
+				margin: auto;
+				margin-top: 15%;
+			}
+			
+			.menu {
+				overflow: hidden;
+			}
+			
+			a {
+				display: block;
+				font-size: 12px;
+				line-height: 18px;
+				text-decoration: none;
+				color: #000000;
+				font-family: Arial;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="menuhead">
+			<div class="menu">
+				<a>凯里·欧文（Kyrie Irving），1992年3月23日出生于澳大利亚墨尔本</a>
+				<a>拥有美国/澳大利亚双重国籍，职业篮球运动员</a>
+				<a>司职控球后卫，效力于NBA波士顿凯尔特人队。</a>
+				<a>凯里·欧文于2011年以选秀状元身份进入NBA，新秀赛季当选最佳新秀</a>
+				<a>2014年首次入选全明星正赛先发阵容</a>
+			</div>
+		</div>
+		<script language="javascript">
+			var n = 2,
+				oMenu = document.querySelector(".menu"),
+				oMenuItem = document.querySelectorAll(".menu a"),
+				runHeight = oMenuItem[0].offsetHeight * n,
+				runFlag = true;
+
+			oMenu.style.height = runHeight + "px";
+			oMenu.innerHTML += oMenu.innerHTML;
+
+			oMenu.addEventListener("mouseover", function() { runFlag = false });
+			oMenu.addEventListener("mouseout", function() { runFlag = true });
+			(function() {
+				var stop = oMenu.scrollTop % runHeight == 0 && !runFlag;
+				if(!stop) {
+					parseInt(oMenu.scrollTop) == parseInt(oMenu.scrollHeight / 2) ? oMenu.scrollTop = 0 : oMenu.scrollTop++;
+				}
+				setTimeout(arguments.callee, 30);
+			})();
+		</script>
+	</body>
+
+</html>
